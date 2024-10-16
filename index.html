@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Spots art gallary web page" />
     <meta name="author" content="Matthew Lee" />
     <meta
@@ -11,15 +11,71 @@
     />
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="./favicon.ico" />
-  <title>Spots</title>
-</head>
-<body>
-  <div class="page">
-    <header class="header">
-    </header>
-    <main class="content"></main>
-    <footer class="footer"></footer>
+    <title>Spots</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/spots-logo.svg"
+          alt="Spots Logo"
+          class="header__logo"
+        />
+        <h1 class="header__title">SPOTS</h1>
+      </header>
 
-  </div>
-</body>
+      <main class="content">
+        <div class="content__card">
+          <div class="card card__header">
+            <img
+              src="./images/avatar.jpg"
+              alt="Bessie Coleman Image"
+              class="card__header_image"
+            />
+            <div class="card__info">
+              <h2 class="card__title">Bessie Coleman</h2>
+              <p class="card__subtitle">Civil Aviator</p>
+            </div>
+            <div class="card__edit">
+              <img
+                src="./images/edit-logo.svg"
+                alt="Edit pencil"
+                class="card__edit_logo"
+              />
+              <p class="card__edit-text">Edit Profile</p>
+            </div>
+            <button class="card__button">
+              <img
+                src="./images/plus.svg"
+                alt="Plus image"
+                class="card__button-logo"
+              />
+              New Post
+            </button>
+          </div>
+          <div class="card card__body">
+            <div class="card__content">
+              <img
+                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="Photo by Moritz Feldmann from pexels"
+                class="card__content-image"
+              />
+              <div class="card__content_footer">
+                <p class="__card__content_image-text">Val Thorens</p>
+                <img
+                  src="./images/like-icon.svg"
+                  alt="heart icon"
+                  class="card__content_image-like"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__copyright">2024 &copy; Spots</p>
+      </footer>
+    </div>
+  </body>
 </html>
