@@ -11,42 +11,52 @@
     />
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
     <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-          <img
-            src="./images/spots-logo.svg"
-            alt="Spots Logo"
-            class="header__logo"
-          />
-          <h1 class="header header__title">SPOTS</h1>
+        <img
+          src="./images/spots-logo.svg"
+          alt="Spots Logo"
+          class="header__logo"
+        />
+        <h1 class="header header__title">SPOTS</h1>
       </header>
 
       <main class="content">
         <div class="content__card">
           <div class="card card__header">
-            <img
-              src="./images/avatar.jpg"
-              alt="Bessie Coleman Image"
-              class="card__header_image"
-            />
-            <div class="card__info">
-              <h2 class="card__title">Bessie Coleman</h2>
-              <p class="card__subtitle">Civil Aviator</p>
-            </div>
-            <div class="card__edit">
+            <div class="card__avatar">
               <img
-                src="./images/edit-logo.svg"
-                alt="Edit pencil"
-                class="card__edit_logo"
+                src="./images/avatar.jpg"
+                alt="Bessie Coleman Image"
+                class="card__header_image"
               />
-              <p class="card__edit-text">Edit Profile</p>
+
+              <div class="card__info">
+                <div class="card__avatar_title">
+                  <h2 class="card__name">Bessie Coleman</h2>
+                  <p class="card__vocation">Civil Aviator</p>
+                </div>
+
+                <div class="card__edit">
+                  <img
+                    src="./images/edit-logo.svg"
+                    alt="Edit pencil"
+                    class="card__edit_logo"
+                  />
+                  <p class="card__edit-text">Edit Profile</p>
+                </div>
+              </div>
             </div>
+
             <button class="card__button">
               <img
                 src="./images/plus.svg"
@@ -56,6 +66,7 @@
               New Post
             </button>
           </div>
+
           <div class="card card__body">
             <div class="card__content">
               <img

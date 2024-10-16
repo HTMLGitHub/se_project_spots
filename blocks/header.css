@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 80px;
-  margin: 0 auto;
+  max-width: 1440px;
+  padding: 10px 80px;;
+  margin: 0;
   background-color: #fff;
 }
 
@@ -20,11 +21,11 @@
   max-height: 26px;
   margin: 0;
   padding: 0;
-  font-family: 'DM Mono';
+  font-family: 'DM Mono', 'Courier New', Courier, monospace;
   font-weight: 500;
   font-size: 20px;
   line-height: 26.04px;
-  letter-spacing: 20%;
+  letter-spacing: 3px;
 }
 
 
