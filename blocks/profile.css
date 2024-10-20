@@ -1,0 +1,121 @@
+.profile {
+  font-family: "Poppins", "Nunito Sans", sans-serif;
+  background-color: #FCF6E6;
+  margin: 0 0 20px;
+  padding: 0;
+  height: 210px;
+  display: flex;
+  align-items: end;
+  border-bottom: rgba(33, 33, 33, 0.4) 1px solid;
+}
+
+.profile__avatar {
+  display: flex;
+  justify-content: space-between;
+  margin: 34px auto 20px 0;
+  padding: 0;
+  max-height: 190px;
+  max-width: 420px;
+}
+
+.profile_image {
+  width: 190px;
+  height: 190px;
+  margin: 0 20px 0 0;
+  padding: 0;
+  border-radius: 5%;
+}
+
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 420px;
+  max-height: 190px;
+  margin: 0;
+  padding: 0;
+}
+
+.profile__avatar_title {
+  margin: 0;
+  padding: 0;
+  max-height: 156px;
+}
+
+.profile__name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp:3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0 0 12px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.profile__vocation {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp:3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.profile__edit {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  transition: opacity 0.3s;
+}
+
+.profile__edit:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.profile__edit_logo {
+  margin: 0;
+  padding: 0;
+}
+
+.profile__edit_text {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.profile__button {
+  width: 149px;
+  height: 52px;
+  background-color: #212121;
+  color: #fcf6e6;
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  transition: opacity 0.3s;
+}
+
+.profile__button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.profile__button-logo {
+  margin: 0;
+  padding: 0 8px 0 0;
+}
