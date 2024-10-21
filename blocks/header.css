@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   max-width: 1440px;
-  padding: 10px 80px;;
+  padding: 10px 80px;
   margin: 0;
   background-color: #fff;
 }
@@ -26,6 +26,28 @@
   font-size: 20px;
   line-height: 26.04px;
   letter-spacing: 3px;
+}
+
+@media screen and (max-width: 627px) {
+  .header {
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .header__logo {
+    margin: 0 8px 0 0;
+    padding: 0;
+  }
+
+  .header__title {
+    margin: 0;
+    padding: 0;
+    width: 76px;
+    height: 26px;
+  }
+
 }
 
 

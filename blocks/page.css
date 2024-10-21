@@ -1,5 +1,18 @@
 .page {
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  background-color: #FCF6E6;;
+  background-color: #fcf6e6;
   max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 627px) {
+  .page {
+    min-width: 320px;
+    width: 100%;
+    flex-shrink: 0;
+  }
 }
