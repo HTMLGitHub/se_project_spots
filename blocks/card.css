@@ -63,4 +63,8 @@
   .card__content_footer {
     max-width: 288px;
   }
+
+  .card__content {
+    margin: 0 0 20px;
+  }
 }
