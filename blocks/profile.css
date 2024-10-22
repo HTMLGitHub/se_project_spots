@@ -1,18 +1,20 @@
 .profile {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   background-color: #fcf6e6;
-  margin: 0 0 20px;
+  margin: 34px 0 20px;
   padding: 0;
   height: 210px;
+  box-sizing: border-box;
   display: flex;
   align-items: end;
+  justify-content: space-between;
   border-bottom: rgba(33, 33, 33, 0.4) 1px solid;
 }
 
 .profile__avatar {
   display: flex;
   justify-content: space-between;
-  margin: 34px auto 20px 0;
+  margin: 34px 0 20px 0;
   padding: 0;
   max-height: 190px;
   max-width: 420px;
@@ -122,21 +124,18 @@
 
 @media screen and (max-width: 627px) {
   .profile {
-    margin: 0 16px 20px;
+    margin: 0 0 20px;
     flex-direction: column;
     align-items: center;
-    width: 288px;
     height: 274px;
-    border-bottom: rgba(33, 33, 33, 0.4) 1px solid;
+    max-width: 288px;
   }
 
   .profile__avatar {
     flex-direction: column;
-    max-width: 288px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0;
     margin: 0 0 20px;
   }
 

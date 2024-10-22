@@ -8,7 +8,7 @@
   
 **Intro**
   
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
+This project is made so all the elements are displayed correctly on popular screen sizes. Spots is a art gallary webpage showcasing, currently, Bessie Coleman. It shows a total of 6 pictures in the gallary.
   
 **Figma**  
   
@@ -19,3 +19,9 @@ This project is made so all the elements are displayed correctly on popular scre
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
   
 Good luck and have fun!
+
+
+
+Github page: [https://github.com/HTMLGitHub/se_project_spots]
+
+The whole page used html/css as well as Figma for how the page is to look. in 1440 px wide and down to 320px wide. The images were provided via TripleTen, and retrieved from Figma. 

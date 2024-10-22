@@ -59,4 +59,8 @@
     width: 288px;
     height: 288px;
   }
+
+  .card__content_footer {
+    max-width: 288px;
+  }
 }
