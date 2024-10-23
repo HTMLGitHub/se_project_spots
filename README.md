@@ -27,3 +27,6 @@ The whole page used html/css as well as Figma for how the page is to look. in 14
 ## Improvements
 
 I plan on getting the buttons to have funtionality. Maybe have a 'like' counter for profile end user to see how many of which images gets the most likes. Have the 'edit' button work to actually edit the profile. Also have the 'post' button actually make a new post.
+
+## Video
+[https://drive.google.com/file/d/1vT-VUMjmvPJ8G6yIGIgpn9JudFZEPnR1/view?usp=sharing]
