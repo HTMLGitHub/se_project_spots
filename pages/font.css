@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Poppins";
   font-style: normal;
-   /* Replace with the appropriate font weight */
+  /* Replace with the appropriate font weight */
   font-weight: 400;
   /* Replace with the correct file path */
   src: url("../vendor/fonts/poppins/Poppins-Regular.ttf") format("truetype");
@@ -10,15 +10,8 @@
 @font-face {
   font-family: "Poppins";
   font-style: normal;
-   /* Replace with the appropriate font weight */
+  /* Replace with the appropriate font weight */
   font-weight: 500;
   /* Replace with the correct file path */
   src: url("../vendor/fonts/poppins/Poppins-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "DM Mono";
-  font-style: normal;
-  font-weight: 500;
-  src: url(../vendor/fonts/dm-mono/DMMono-Medium.ttf) format("truetype");
 }

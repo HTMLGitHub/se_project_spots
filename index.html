@@ -13,10 +13,7 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
-      rel="stylesheet"
-    />
+
     <title>Spots</title>
   </head>
   <body>
@@ -27,7 +24,6 @@
           alt="Spots Logo"
           class="header__logo"
         />
-        <h1 class="header__title">SPOTS</h1>
       </header>
 
       <main class="content">
@@ -40,25 +36,24 @@
             />
 
             <div class="profile__info">
-              <div class="profile__avatar_title">
-                <h2 class="profile__name">Bessie Coleman</h2>
+              <div class="profile__avatar-title">
+                <h1 class="profile__name">Bessie Coleman</h1>
                 <p class="profile__vocation">Civil Aviator</p>
               </div>
 
-              <div class="profile__edit">
+              <button class="profile__edit-button" type="button">
                 <img
+                  class="profile__edit-logo"
                   src="./images/edit-logo.svg"
-                  alt="Edit pencil"
-                  class="profile__edit_logo"
+                  alt="edit-logo"
                 />
-                <p class="profile__edit_text">Edit Profile</p>
-              </div>
+                Edit Profile
+              </button>
             </div>
           </div>
 
-          <button class="profile__button">
+          <button class="profile__button" type="button">
             <img
-              type="button"
               src="./images/plus.svg"
               alt="Plus image"
               class="profile__button-logo"
@@ -75,15 +70,11 @@
                 <img
                   src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
                   alt="Photo by Moritz Feldmann from pexels"
-                  class="card__content_image"
+                  class="card__content-image"
                 />
-                <figcaption class="card__content_footer">
-                  <p class="card__content_caption">Val Thorens</p>
-                  <img
-                    src="./images/like-icon.svg"
-                    alt="heart icon"
-                    class="card__content_like"
-                  />
+                <figcaption class="card__content-footer">
+                  <h2 class="card__content-caption">Val Thorens</h2>
+                  <button type="button" class="card__content-like" />
                 </figcaption>
               </figure>
             </li>
@@ -94,15 +85,11 @@
                 <img
                   src="./images/2-photo-by-ceiline-from-pexels.jpg"
                   alt="Photo by Ceiline from pexels"
-                  class="card__content_image"
+                  class="card__content-image"
                 />
-                <figcaption class="card__content_footer">
-                  <p class="card__content_caption">Restaurant terrace</p>
-                  <img
-                    src="./images/like-icon.svg"
-                    alt="heart icon"
-                    class="card__content_like"
-                  />
+                <figcaption class="card__content-footer">
+                  <h2 class="card__content-caption">Restaurant terrace</h2>
+                  <button type="button" class="card__content-like" />
                 </figcaption>
               </figure>
             </li>
@@ -113,15 +100,11 @@
                 <img
                   src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
                   alt="Photo by Tubanur Dogan from pexels"
-                  class="card__content_image"
+                  class="card__content-image"
                 />
-                <figcaption class="card__content_footer">
-                  <p class="card__content_caption">An outdoor cafe</p>
-                  <img
-                    src="./images/like-icon.svg"
-                    alt="heart icon"
-                    class="card__content_like"
-                  />
+                <figcaption class="card__content-footer">
+                  <h2 class="card__content-caption">An outdoor cafe</h2>
+                  <button type="button" class="card__content-like" />
                 </figcaption>
               </figure>
             </li>
@@ -132,17 +115,13 @@
                 <img
                   src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
                   alt="Photo by Maurice Laschet from pexels"
-                  class="card__content_image"
+                  class="card__content-image"
                 />
-                <figcaption class="card__content_footer">
-                  <p class="card__content_caption">
+                <figcaption class="card__content-footer">
+                  <h2 class="card__content-caption">
                     A very long bridge, over the forest...
-                  </p>
-                  <img
-                    src="./images/like-icon.svg"
-                    alt="heart icon"
-                    class="card__content_like"
-                  />
+                  </h2>
+                  <button type="button" class="card__content-like" />
                 </figcaption>
               </figure>
             </li>
@@ -153,15 +132,13 @@
                 <img
                   src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
                   alt="Photo by Van Anh Nguyen from pexels"
-                  class="card__content_image"
+                  class="card__content-image"
                 />
-                <figcaption class="card__content_footer">
-                  <p class="card__content_caption">Tunnel with morning light</p>
-                  <img
-                    src="./images/like-icon.svg"
-                    alt="heart icon"
-                    class="card__content_like"
-                  />
+                <figcaption class="card__content-footer">
+                  <h2 class="card__content-caption">
+                    Tunnel with morning light
+                  </h2>
+                  <button type="button" class="card__content-like" />
                 </figcaption>
               </figure>
             </li>
@@ -172,19 +149,14 @@
                 <img
                   src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
                   alt="Photo by Moritz Feldmann from pexels"
-                  class="card__content_image"
+                  class="card__content-image"
                 />
-                <figcaption class="card__content_footer">
-                  <p class="card__content_caption">Mountain house</p>
-                  <img
-                    src="./images/like-icon.svg"
-                    alt="heart icon"
-                    class="card__content_like"
-                  />
+                <figcaption class="card__content-footer">
+                  <h2 class="card__content-caption">Mountain house</h2>
+                  <button type="button" class="card__content-like" />
                 </figcaption>
               </figure>
             </li>
-
           </ul>
         </section>
       </main>
@@ -192,7 +164,6 @@
       <footer class="footer">
         <p class="footer__copyright">2024&nbsp;&copy;&nbsp;Spots</p>
       </footer>
-
     </div>
   </body>
 </html>

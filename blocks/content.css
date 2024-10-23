@@ -1,8 +1,7 @@
 .content {
-
   margin: 34px 80px 60px;
   padding: 0;
-  background-color: #FCF6E6;
+  background-color: #fcf6e6;
   box-sizing: border-box;
 }
 
@@ -11,4 +10,3 @@
     margin: 20px 16px;
   }
 }
-

@@ -12,12 +12,6 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(288px, 413px));
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 0px;
 }
-
-@media screen and (max-width: 627px) {
-  .card__list {
-    gap: 0;
-  }
-}
-
