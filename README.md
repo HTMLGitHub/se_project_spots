@@ -20,7 +20,7 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 Good luck and have fun!
 
-Github page: [https://github.com/HTMLGitHub/se_project_spots]
+Github page: [https://htmlgithub.github.io/se_project_spots/]
 
 The whole page used html/css as well as Figma for how the page is to look. in 1440 px wide and down to 320px wide. The images were provided via TripleTen, and retrieved from Figma.
 
