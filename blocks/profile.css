@@ -135,6 +135,11 @@
     margin: 0 0 12px 0;
   }
 
+  .profile__info
+  {
+    align-items: center;
+  }
+
   .profile__info {
     align-items: center;
   }
