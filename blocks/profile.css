@@ -1,7 +1,7 @@
 .profile {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   background-color: #fcf6e6;
-  margin: 34px 0 20px;
+  margin: 0 0 20px;
   padding: 0;
   box-sizing: border-box;
   display: flex;
@@ -135,6 +135,11 @@
     margin: 0 0 12px 0;
   }
 
+  .profile__info {
+    align-items: center;
+  }
+
+
   .profile__name {
     font-size: 20px;
     line-height: 20px;
@@ -143,10 +148,6 @@
 
   .profile__vocation {
     margin: 0 0 32px 0;
-  }
-
-  .profile__edit {
-    justify-content: center;
   }
 
   .profile__button {

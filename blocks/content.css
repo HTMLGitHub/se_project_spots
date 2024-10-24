@@ -1,5 +1,5 @@
 .content {
-  margin: 34px 80px 60px;
+  margin: 0 80px;
   padding: 0;
   background-color: #fcf6e6;
   box-sizing: border-box;
@@ -7,6 +7,6 @@
 
 @media screen and (max-width: 627px) {
   .content {
-    margin: 20px 16px;
+    margin: 20px 16px 0;
   }
 }

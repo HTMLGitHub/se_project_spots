@@ -10,7 +10,7 @@
 .card__content {
   max-width: 413px;
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0;
 }
 
 .card__content-image {
@@ -67,10 +67,6 @@
 
   .card__content-footer {
     max-width: 288px;
-  }
-
-  .card__content {
-    margin: 0 0 40px 0;
   }
 
   .card__content-caption {
