@@ -44,7 +44,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   margin: 0 0 12px 0;
@@ -58,7 +57,6 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   margin: 0;
