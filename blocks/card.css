@@ -46,6 +46,8 @@
 .card__content-like {
   background-image: url("../images/like-icon.svg");
   border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 23px;
   height: 20px;
   opacity: 0.4;
