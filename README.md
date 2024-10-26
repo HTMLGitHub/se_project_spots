@@ -22,7 +22,9 @@ Good luck and have fun!
 
 Github page: [https://htmlgithub.github.io/se_project_spots/)]
 
-The whole page used html/css as well as Figma for how the page is to look. in 1440 px wide and down to 320px wide. The images were provided via TripleTen, and retrieved from Figma.
+The whole page used html/css/javascript as well as Figma for how the page is to look. in 1440 px wide and down to 320px wide. The images were provided via TripleTen, and retrieved from Figma.
+
+Currently Javascipt has an object array list for the names and images stored within and has a link in within html, but no actual javascript functionality.
 
 ## Improvements
 
