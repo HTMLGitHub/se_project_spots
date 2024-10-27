@@ -8,7 +8,11 @@
 
 **Intro**
 
-This project is made so all the elements are displayed correctly on popular screen sizes. Spots is a art gallary webpage showcasing, currently, Bessie Coleman. It shows a total of 6 pictures in the gallary.
+This project is made so all the elements are displayed correctly on popular screen sizes.
+
+Spots is a art gallary webpage showcasing, currently, Bessie Coleman. It shows a total of 6 pictures in the gallary. 
+
+A modal has been created for when the 'edit' button gets connected, to be able to edit your profile. 
 
 **Figma**
 
