@@ -1,6 +1,11 @@
+body {
+  background-color: #fcf6e6;
+}
+
 .page {
   font-family: Poppins, Arial, Helvetica, sans-serif;
-  background-color: #fcf6e6;
+  min-width: 320px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
