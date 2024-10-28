@@ -30,14 +30,32 @@ const initialCards = [
   },
 ];
 
-function getCardElement(element) {
-  const cardTemplate = document.querySelector("#card__template").content;
-  const cardList = document.querySelector("#cards__list-id");
-  const card = cardTemplate.cloneNode(true);
-  card.querySelector(".card__content-image").src = element.link;
-  card.querySelector(".card__content-image").alt = element.name;
-  card.querySelector(".card__content-caption").textContent = element.name;
+const modalContainer = document.querySelector(".modal");
 
+const editButton = document.querySelector(".profile__edit-button");
+const closeButton = document.querySelector(".modal__close-btn");
+const cardTemplate = document.querySelector("#card__template").content;
+const cardList = document.querySelector("#cards__list-id");
+
+const profileName = document.querySelector(".profile__name").textContent;
+const profileVocation = document.querySelector(".profile__vocation").textContent;
+const profileForm = document.forms["profile-form"];
+
+function createCard(item) {
+  const cardElement = cardTemplate.cloneNode(true);
+
+  const cardImage = cardElement.querySelector(".card__content-image")
+
+  cardImage.src = item.link;
+  cardImage.alt = item.name;
+
+  cardElement.querySelector(".card__content-caption").textContent = item.name;
+
+  return cardElement;
+}
+
+function getCardElement(element) {
+  const card = createCard(element);
   cardList.appendChild(card);
 }
 
@@ -48,11 +66,7 @@ function getElement() {
   });
 }
 
-let editButton = document.querySelector(".profile__edit-button");
-let closeButton = document.querySelector(".modal__close-btn");
-
 function showModal() {
-  let modalContainer = document.querySelector(".modal");
   modalContainer.classList.add("modal_opened");
 
   document.querySelector("#name").value = profileName;
@@ -60,29 +74,23 @@ function showModal() {
 }
 
 function closeModal() {
-  let modalContainer = document.querySelector(".modal");
   modalContainer.classList.remove("modal_opened");
 }
 
-let profileName = document.querySelector(".profile__name").textContent;
-let profileVocation = document.querySelector(".profile__vocation").textContent;
-let profileForm = document.querySelector(".modal__form");
-
-function saveModal(evt) {
+function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
-  let nameInput = profileForm.querySelector("#name").value;
-  let vocationInput = profileForm.querySelector("#description").value;
+  const nameInput = profileForm.querySelector("#name").value;
+  const vocationInput = profileForm.querySelector("#description").value;
 
   document.querySelector(".profile__name").textContent = nameInput;
   document.querySelector(".profile__vocation").textContent = vocationInput;
 
-  let modalContainer = document.querySelector(".modal");
-  modalContainer.classList.remove("modal_opened");
+  closeModal();
 }
 
 editButton.addEventListener("click", showModal);
 closeButton.addEventListener("click", closeModal);
-profileForm.addEventListener("submit", saveModal);
+profileForm.addEventListener("submit", handleProfileFormSubmit);
 
 getElement();
