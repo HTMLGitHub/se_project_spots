@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <meta name="description" content="Spots art gallary web page" >
-    <meta name="author" content="Matthew Lee" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spots art gallary web page">
+    <meta name="author" content="Matthew Lee">
     <meta
       name="keywords"
-      content="html, css, coffee shop, triple peaks library, spots, gallary"
-    >
-    <link rel="stylesheet" href="./pages/index.css" >
-    <link rel="shortcut icon" href="./favicon.ico" >
-    <link rel="preconnect" href="https://fonts.googleapis.com" >
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+      content="html, css, coffee shop, triple peaks library, spots, gallary">
+    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <title>Spots</title>
   </head>
@@ -22,8 +21,7 @@
         <img
           src="./images/spots-logo.svg"
           alt="Spots Logo"
-          class="header__logo"
-        >
+          class="header__logo">
       </header>
 
       <main class="content">
@@ -32,8 +30,7 @@
             <img
               src="./images/avatar.jpg"
               alt="Bessie Coleman Image"
-              class="profile__image"
-            >
+              class="profile__image">
             <div class="profile__info">
               <div class="profile__avatar-title">
                 <h1 class="profile__name">Bessie Coleman</h1>
@@ -44,8 +41,7 @@
                 <img
                   class="profile__edit-logo"
                   src="./images/edit-logo.svg"
-                  alt="edit-logo"
-                >
+                  alt="edit-logo">
                 Edit Profile
               </button>
             </div>
@@ -55,108 +51,27 @@
             <img
               src="./images/plus.svg"
               alt="Plus image"
-              class="profile__button-logo"
-            >
+              class="profile__button-logo">
             New Post
           </button>
         </section>
 
         <section class="cards">
-          <ul class="cards__list">
-            <!--Row 1 Column 1-->
-            <li class="card">
-              <figure class="card__content">
-                <img
-                  src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                  alt="Photo by Moritz Feldmann from pexels"
-                  class="card__content-image"
-                >
-                <figcaption class="card__content-footer">
-                  <h2 class="card__content-caption">Val Thorens</h2>
-                  <button type="button" class="card__content-like"></button>
-                </figcaption>
-              </figure>
-            </li>
+          <ul class="cards__list" id="cards__list-id">
 
-            <!--Row 1 Column 2-->
-            <li class="card">
-              <figure class="card__content">
-                <img
-                  src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                  alt="Photo by Ceiline from pexels"
-                  class="card__content-image"
-                >
-                <figcaption class="card__content-footer">
-                  <h2 class="card__content-caption">Restaurant terrace</h2>
-                  <button type="button" class="card__content-like"></button>
-                </figcaption>
-              </figure>
-            </li>
-
-            <!--Row 1 Column 3-->
-            <li class="card">
-              <figure class="card__content">
-                <img
-                  src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                  alt="Photo by Tubanur Dogan from pexels"
-                  class="card__content-image"
-                >
-                <figcaption class="card__content-footer">
-                  <h2 class="card__content-caption">An outdoor cafe</h2>
-                  <button type="button" class="card__content-like"></button>
-                </figcaption>
-              </figure>
-            </li>
-
-            <li class="card">
-              <!--Row 2 Column 1-->
-              <figure class="card__content">
-                <img
-                  src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                  alt="Photo by Maurice Laschet from pexels"
-                  class="card__content-image"
-                >
-                <figcaption class="card__content-footer">
-                  <h2 class="card__content-caption">
-                    A very long bridge, over the forest, stretches into the distance with wooden planks and sturdy metal railings, surrounded by thick, green and golden foliage
-                  </h2>
-                  <button type="button" class="card__content-like"></button>
-                </figcaption>
-              </figure>
-            </li>
-
-            <li class="card">
-              <!--Row 2 Column 2-->
-              <figure class="card__content">
-                <img
-                  src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                  alt="Photo by Van Anh Nguyen from pexels"
-                  class="card__content-image"
-                >
-                <figcaption class="card__content-footer">
-                  <h2 class="card__content-caption">
-                    Tunnel with morning light
-                  </h2>
-                  <button type="button" class="card__content-like"></button>
-                </figcaption>
-              </figure>
-            </li>
-
-            <li class="card">
-              <!--Row 2 Column 3-->
-              <figure class="card__content">
-                <img
-                  src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                  alt="Photo by Moritz Feldmann from pexels"
-                  class="card__content-image"
-                >
-                <figcaption class="card__content-footer">
-                  <h2 class="card__content-caption">Mountain house</h2>
-                  <button type="button" class="card__content-like"></button>
-                </figcaption>
-              </figure>
-            </li>
           </ul>
+
+          <template id="card__template">
+            <li class="card">
+              <figure class="card__content">
+                <img class="card__content-image" alt="">
+                <figcaption class="card__content-footer">
+                  <h2 class="card__content-caption"></h2>
+                  <button type="button" class="card__content-like"></button>
+                </figcaption>
+              </figure>
+            </li>
+          </template>
         </section>
       </main>
 
@@ -164,7 +79,7 @@
         <p class="footer__copyright">2024&nbsp;&copy;&nbsp;Spots</p>
       </footer>
 
-      <div class="modal modal_opened">
+      <div class="modal">
         <div class="modal__container">
 
           <h2 class="modal__title">Edit Profile</h2>
@@ -173,11 +88,13 @@
           <form name=edit-profile" class="modal__form">
             <label for="name" class="modal__label">
               Name
-              <input id="name" type="text" class="modal__input" placeholder="Enter name"/>
+              <input id="name" type="text" class="modal__input"
+                placeholder="Enter name" />
             </label>
             <label for="description" class="modal__label">
               Description
-              <input id="description" type="text" class="modal__input" placeholder="Enter description"/>
+              <input id="description" type="text" class="modal__input"
+                placeholder="Enter description" />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
