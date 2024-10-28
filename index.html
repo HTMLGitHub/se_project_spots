@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spots art gallary web page">
-    <meta name="author" content="Matthew Lee">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spots art gallary web page" />
+    <meta name="author" content="Matthew Lee" />
     <meta
       name="keywords"
-      content="html, css, coffee shop, triple peaks library, spots, gallary">
-    <link rel="stylesheet" href="./pages/index.css">
-    <link rel="shortcut icon" href="./favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      content="html, css, coffee shop, triple peaks library, spots, gallary"
+    />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <title>Spots</title>
   </head>
@@ -21,7 +22,8 @@
         <img
           src="./images/spots-logo.svg"
           alt="Spots Logo"
-          class="header__logo">
+          class="header__logo"
+        />
       </header>
 
       <main class="content">
@@ -30,7 +32,8 @@
             <img
               src="./images/avatar.jpg"
               alt="Bessie Coleman Image"
-              class="profile__image">
+              class="profile__image"
+            />
             <div class="profile__info">
               <div class="profile__avatar-title">
                 <h1 class="profile__name">Bessie Coleman</h1>
@@ -41,7 +44,8 @@
                 <img
                   class="profile__edit-logo"
                   src="./images/edit-logo.svg"
-                  alt="edit-logo">
+                  alt="edit-logo"
+                />
                 Edit Profile
               </button>
             </div>
@@ -51,20 +55,19 @@
             <img
               src="./images/plus.svg"
               alt="Plus image"
-              class="profile__button-logo">
+              class="profile__button-logo"
+            />
             New Post
           </button>
         </section>
 
         <section class="cards">
-          <ul class="cards__list" id="cards__list-id">
-
-          </ul>
+          <ul class="cards__list" id="cards__list-id"></ul>
 
           <template id="card__template">
             <li class="card">
               <figure class="card__content">
-                <img class="card__content-image" alt="">
+                <img class="card__content-image" alt="" />
                 <figcaption class="card__content-footer">
                   <h2 class="card__content-caption"></h2>
                   <button type="button" class="card__content-like"></button>
@@ -81,20 +84,27 @@
 
       <div class="modal">
         <div class="modal__container">
-
           <h2 class="modal__title">Edit Profile</h2>
           <button type="button" class="modal__close-btn"></button>
 
-          <form name=edit-profile" class="modal__form">
+          <form name="edit-profile" class="modal__form">
             <label for="name" class="modal__label">
               Name
-              <input id="name" type="text" class="modal__input"
-                placeholder="Enter name" />
+              <input
+                id="name"
+                type="text"
+                class="modal__input"
+                placeholder="Enter name"
+              />
             </label>
             <label for="description" class="modal__label">
               Description
-              <input id="description" type="text" class="modal__input"
-                placeholder="Enter description" />
+              <input
+                id="description"
+                type="text"
+                class="modal__input"
+                placeholder="Enter description"
+              />
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
