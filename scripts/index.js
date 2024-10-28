@@ -37,8 +37,6 @@ const closeButton = document.querySelector(".modal__close-btn");
 const cardTemplate = document.querySelector("#card__template").content;
 const cardList = document.querySelector("#cards__list-id");
 
-const profileName = document.querySelector(".profile__name").textContent;
-const profileVocation = document.querySelector(".profile__vocation").textContent;
 const profileForm = document.forms["profile-form"];
 
 function createCard(item) {
@@ -67,6 +65,9 @@ function getElement() {
 }
 
 function showModal() {
+  const profileName = document.querySelector(".profile__name").textContent;
+  const profileVocation = document.querySelector(".profile__vocation").textContent;
+
   modalContainer.classList.add("modal_opened");
 
   document.querySelector("#name").value = profileName;
