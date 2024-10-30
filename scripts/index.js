@@ -36,6 +36,8 @@ const editButton = document.querySelector(".profile__edit-button");
 const closeButton = document.querySelector(".modal__close-btn");
 const cardTemplate = document.querySelector("#card__template").content;
 const cardList = document.querySelector("#cards__list-id");
+const profileName = document.querySelector(".profile__name").textContent;
+const profileVocation = document.querySelector(".profile__vocation").textContent;
 
 const profileForm = document.forms["profile-form"];
 
@@ -57,7 +59,7 @@ function getCardElement(element) {
   cardList.appendChild(card);
 }
 
-function getElement() {
+function renderCards() {
   // Render the cards
   initialCards.forEach((element) => {
     getCardElement(element);
@@ -65,9 +67,6 @@ function getElement() {
 }
 
 function showModal() {
-  const profileName = document.querySelector(".profile__name").textContent;
-  const profileVocation = document.querySelector(".profile__vocation").textContent;
-
   modalContainer.classList.add("modal_opened");
 
   document.querySelector("#name").value = profileName;
@@ -94,4 +93,4 @@ editButton.addEventListener("click", showModal);
 closeButton.addEventListener("click", closeModal);
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 
-getElement();
+renderCards();
