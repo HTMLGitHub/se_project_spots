@@ -41,10 +41,13 @@ const profileVocation = document.querySelector(".profile__vocation");
 
 const profileForm = document.forms["profile-form"];
 
+let nameInput = profileForm.querySelector("#name");
+let vocationInput = profileForm.querySelector("#description");
+
 function createCard(item) {
   const cardElement = cardTemplate.cloneNode(true);
 
-  const cardImage = cardElement.querySelector(".card__content-image")
+  const cardImage = cardElement.querySelector(".card__content-image");
 
   cardImage.src = item.link;
   cardImage.alt = item.name;
@@ -80,8 +83,8 @@ function closeModal() {
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
-  const nameInput = profileForm.querySelector("#name").value;
-  const vocationInput = profileForm.querySelector("#description").value;
+  nameInput = nameInput.value;
+  vocationInput = vocationInput.value;
 
   document.querySelector(".profile__name").textContent = nameInput;
   document.querySelector(".profile__vocation").textContent = vocationInput;
