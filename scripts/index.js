@@ -41,8 +41,11 @@ const profileVocation = document.querySelector(".profile__vocation");
 
 const profileForm = document.forms["profile-form"];
 
-let nameInput = profileForm.querySelector("#name");
-let vocationInput = profileForm.querySelector("#description");
+const nameInput = profileForm.querySelector("#name");
+const vocationInput = profileForm.querySelector("#description");
+
+const textName = document.querySelector("#name");
+const textDescription = document.querySelector("#description");
 
 function createCard(item) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -72,8 +75,8 @@ function renderCards() {
 function showModal() {
   modalContainer.classList.add("modal_opened");
 
-  document.querySelector("#name").value = profileName.textContent;
-  document.querySelector("#description").value = profileVocation.textContent;
+  textName.value = profileName.textContent;
+  textDescription.value = profileVocation.textContent;
 }
 
 function closeModal() {
@@ -83,11 +86,8 @@ function closeModal() {
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
-  nameInput = nameInput.value;
-  vocationInput = vocationInput.value;
-
-  document.querySelector(".profile__name").textContent = nameInput;
-  document.querySelector(".profile__vocation").textContent = vocationInput;
+  profileName.textContent = nameInput.value;
+  profileVocation.textContent = vocationInput.value;
 
   closeModal();
 }
