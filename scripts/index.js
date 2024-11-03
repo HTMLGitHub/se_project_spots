@@ -33,17 +33,19 @@ const initialCards = [
 const modalContainer = document.querySelector(".modal");
 
 const modalButtons = document.querySelectorAll(".modal-button");
-const editModal = document.querySelector("#edit");
-
 const newPostButton = document.querySelector(".profile__new-post-button");
+const closeButtons = document.querySelectorAll(".modal__close-btn");
+
+
+const editModal = document.querySelector("#edit");
 const newPostModal = document.querySelector("#new-post");
 
-const closeButtons = document.querySelectorAll(".modal__close-btn");
+
 const cardTemplate = document.querySelector("#card__template").content;
 const cardList = document.querySelector("#cards__list-id");
+
 const profileName = document.querySelector(".profile__name");
 const profileVocation = document.querySelector(".profile__vocation");
-
 const profileForm = document.forms["profile-form"];
 
 const nameInput = profileForm.querySelector("#name");
@@ -62,13 +64,24 @@ let createCounter = 0;
 
 function createCard(item) {
   const cardElement = cardTemplate.cloneNode(true);
-
   const cardImage = cardElement.querySelector(".card__content-image");
+  const cardCaption = cardElement.querySelector(".card__content-caption");
+  const cardLikeButton = cardElement.querySelector(".card__content-like");
 
   cardImage.src = item.link;
   cardImage.alt = item.name;
 
-  cardElement.querySelector(".card__content-caption").textContent = item.name;
+  cardCaption.textContent = item.name;
+
+  cardLikeButton.addEventListener("click", () => {
+    // Toggle between the 'like' and 'liked' classes
+    cardLikeButton.classList.toggle("card__content-like");
+    cardLikeButton.classList.toggle("card__content-liked");
+  });
+
+  cardImage.addEventListener("click", () => {
+    console.log("Make Image full sized");
+  })
 
   return cardElement;
 }
@@ -76,8 +89,6 @@ function createCard(item) {
 function getCardElement(element) {
   const card = createCard(element);
   cardList.appendChild(card);
-
-  console.log(`getCardElement(element) called: ${++createCounter}`);
 }
 
 function renderCards() {
@@ -109,7 +120,6 @@ function editProfileModal() {
 function newPost() {
   console.log("New Post");
 
-  console.log(`newPost() called: ${++newPostcounter}`);
   const newCard = {
     name: captionInput.value,
     link: linkInput.value,
