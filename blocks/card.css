@@ -11,6 +11,7 @@
   max-width: 413px;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 .card__content-image {
@@ -20,6 +21,36 @@
   padding: 0;
   margin: 0 0 12px 0;
   border-radius: 8px;
+}
+
+.card__delete-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(33, 33, 33, 0.3);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__delete-button::before {
+  content: "";
+  background-image: url("../images/trash-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 12px;
+  display: block;
+}
+
+.card__delete-button:hover {
+  background-color: rgba(235, 87, 87, 1);
 }
 
 .card__content-footer {
@@ -58,30 +89,21 @@
 }
 
 .card__content-like:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-.card__content-liked {
+.card__content-like_liked {
   background-image: url("../images/like-icon_liked.svg");
-  border: none;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 23px;
-  height: 20px;
   opacity: 1;
   transition: opacity 0.3s;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
 }
 
-.card__content-liked:hover {
-  opacity: .6;
+.card__content-like_liked:hover {
+  opacity: 0.6;
 }
-
 
 @media screen and (max-width: 627px) {
-  .card__content-image {
+ .card__content-image {
     width: 288px;
     height: 288px;
   }

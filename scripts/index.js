@@ -63,10 +63,13 @@ let createCounter = 0;
 
 
 function createCard(item) {
-  const cardElement = cardTemplate.cloneNode(true);
+  const cardElement = document.createElement("div");
+  cardElement.appendChild(cardTemplate.cloneNode(true));
+
   const cardImage = cardElement.querySelector(".card__content-image");
   const cardCaption = cardElement.querySelector(".card__content-caption");
   const cardLikeButton = cardElement.querySelector(".card__content-like");
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
   cardImage.src = item.link;
   cardImage.alt = item.name;
@@ -74,14 +77,17 @@ function createCard(item) {
   cardCaption.textContent = item.name;
 
   cardLikeButton.addEventListener("click", () => {
-    // Toggle between the 'like' and 'liked' classes
-    cardLikeButton.classList.toggle("card__content-like");
-    cardLikeButton.classList.toggle("card__content-liked");
+    cardLikeButton.classList.toggle("card__content-like_liked");
   });
 
   cardImage.addEventListener("click", () => {
     console.log("Make Image full sized");
-  })
+  });
+
+  cardDeleteButton.addEventListener("click", () => {
+    //Remove the card element
+    cardElement.remove();
+  });
 
   return cardElement;
 }
@@ -118,15 +124,10 @@ function editProfileModal() {
 }
 
 function newPost() {
-  console.log("New Post");
-
   const newCard = {
     name: captionInput.value,
     link: linkInput.value,
   };
-
-  console.log(newCard);
-
 
   const newCardElement = createCard(newCard);
   cardList.prepend(newCardElement);
