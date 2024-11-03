@@ -51,6 +51,15 @@ const vocationInput = profileForm.querySelector("#description");
 const profileTextName = document.querySelector("#name");
 const profileTextVocation = document.querySelector("#description");
 
+const newPostForm = document.forms["new-post-form"];
+
+const linkInput = newPostForm.querySelector("#link");
+const captionInput = newPostForm.querySelector("#caption");
+
+let newPostcounter = 0;
+let createCounter = 0;
+
+
 function createCard(item) {
   const cardElement = cardTemplate.cloneNode(true);
 
@@ -67,6 +76,8 @@ function createCard(item) {
 function getCardElement(element) {
   const card = createCard(element);
   cardList.appendChild(card);
+
+  console.log(`getCardElement(element) called: ${++createCounter}`);
 }
 
 function renderCards() {
@@ -86,20 +97,29 @@ function showModal(button) {
       editProfileModal();
       break;
     case "new-post":
-      newPost();
-      break;
+    break;
   }
 }
 
 function editProfileModal() {
-  console.log("Edit");
   profileTextName.value = profileName.textContent;
   profileTextVocation.value = profileVocation.textContent;
 }
 
 function newPost() {
   console.log("New Post");
-  //closeModal();
+
+  console.log(`newPost() called: ${++newPostcounter}`);
+  const newCard = {
+    name: captionInput.value,
+    link: linkInput.value,
+  };
+
+  console.log(newCard);
+
+
+  const newCardElement = createCard(newCard);
+  cardList.prepend(newCardElement);
 }
 
 // Closing function ONLY for 'Submit' buttons
@@ -121,7 +141,7 @@ function handleEditProfileFormSubmit(evt) {
 function handleNewPostFormSubmit(evt) {
   evt.preventDefault();
 
-  // TODO: Do something
+  newPost();
 
   closeModal();
 }
@@ -149,5 +169,7 @@ window.addEventListener("click", (event) => {
 });
 
 profileForm.addEventListener("submit", handleEditProfileFormSubmit);
+
+newPostForm.addEventListener("submit", handleNewPostFormSubmit);
 
 renderCards();
