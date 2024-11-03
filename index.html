@@ -40,7 +40,7 @@
                 <p class="profile__vocation">Civil Aviator</p>
               </div>
 
-              <button class="profile__edit-button" type="button">
+              <button class="profile__edit-button modal-button" type="button" data-modal="edit">
                 <img
                   class="profile__edit-logo"
                   src="./images/edit-logo.svg"
@@ -51,11 +51,11 @@
             </div>
           </div>
 
-          <button class="profile__button" type="button">
+          <button class="profile__new-post-button modal-button" type="button" data-modal="new-post">
             <img
               src="./images/plus.svg"
               alt="Plus image"
-              class="profile__button-logo"
+              class="profile__new-post-button-logo"
             />
             New Post
           </button>
@@ -82,10 +82,10 @@
         <p class="footer__copyright">2024&nbsp;&copy;&nbsp;Spots</p>
       </footer>
 
-      <div class="modal">
-        <div class="modal__container">
+      <div class="modal" id="edit">
+        <div class="modal__container modal__edit">
           <h2 class="modal__title">Edit Profile</h2>
-          <button type="button" class="modal__close-btn"></button>
+          <button type="button" class="modal__close-btn" data-close="edit"></button>
 
           <form name="profile-form" class="modal__form">
             <label for="name" class="modal__label">
@@ -106,7 +106,35 @@
                 placeholder="Enter description"
               />
             </label>
-            <button type="submit" class="modal__submit-btn">Save</button>
+            <button type="submit" class="modal__submit-btn" data-close="edit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="new-post">
+        <div class="modal__container">
+          <h2 class="modal__title">New Post</h2>
+          <button type="button" class="modal__close-btn" data-close="new-post"></button>
+
+          <form name="profile-form" class="modal__form">
+            <label for="link" class="modal__label">
+              Image Link
+              <input
+                id="link"
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+              />
+            </label>
+            <label for="caption" class="modal__label">
+              Caption
+              <input
+                id="caption"
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn" data-close="new-post">Save</button>
           </form>
         </div>
       </div>

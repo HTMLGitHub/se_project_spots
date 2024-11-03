@@ -90,7 +90,7 @@
   padding: 0;
 }
 
-.profile__button {
+.profile__new-post-button {
   width: 149px;
   height: 52px;
   background-color: #212121;
@@ -104,12 +104,12 @@
   transition: opacity 0.3s;
 }
 
-.profile__button:hover {
+.profile__new-post-button:hover {
   cursor: pointer;
   opacity: 0.8;
 }
 
-.profile__button-logo {
+.profile__new-post-button-logo {
   margin: 0;
   padding: 0 8px 0 0;
 }
@@ -156,7 +156,7 @@
     margin: 0 0 32px 0;
   }
 
-  .profile__button {
+  .profile__new-post-button {
     margin: 0 0 20px 0;
     padding: 0;
     width: 288px;
