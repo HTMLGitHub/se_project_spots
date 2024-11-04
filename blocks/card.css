@@ -75,7 +75,8 @@
 }
 
 .card__content-like {
-  background-image: url("../images/like-icon.svg");
+  background-image: url("../images/like-icon.png");
+  background-color: transparent;
   border: none;
   background-size: contain;
   background-repeat: no-repeat;
@@ -93,7 +94,8 @@
 }
 
 .card__content-like_liked {
-  background-image: url("../images/like-icon_liked.svg");
+  background-image: url("../images/like-icon_liked.png");
+  background-color: transparent;
   opacity: 1;
   transition: opacity 0.3s;
 }

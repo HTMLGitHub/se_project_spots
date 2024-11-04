@@ -116,6 +116,13 @@
   border-radius: 8px;
   background-color: #212121;
   color: #FCF5E5;
+  cursor:pointer;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.modal__submit-btn:hover {
+  opacity: .8;
 }
 
 .modal__preview-image {

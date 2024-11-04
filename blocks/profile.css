@@ -76,12 +76,13 @@
   transition: opacity 0.3s;
   max-width: 107.34px;
   background-color: transparent;
+  cursor: pointer;
   border: none;
   opacity: .7;
 }
 
 .profile__edit-button:hover {
-  cursor: pointer;
+
   opacity: 1;
 }
 
@@ -102,10 +103,10 @@
   font-size: 16px;
   line-height: 16px;
   transition: opacity 0.3s;
+  cursor: pointer;
 }
 
 .profile__new-post-button:hover {
-  cursor: pointer;
   opacity: 0.8;
 }
 
