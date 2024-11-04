@@ -61,10 +61,6 @@ const newPostForm = document.forms["new-post-form"];
 const linkInput = newPostForm.querySelector("#link");
 const captionInput = newPostForm.querySelector("#caption");
 
-let newPostcounter = 0;
-let createCounter = 0;
-
-
 function createCard(item) {
   const cardElement = document.createElement("div");
   cardElement.appendChild(cardTemplate.cloneNode(true));
@@ -120,13 +116,7 @@ function showModal(button) {
   const modal = document.getElementById(modalId);
   if (modal) modal.classList.add("modal_opened");
 
-  switch (modalId) {
-    case "edit":
-      editProfileModal();
-      break;
-    case "new-post":
-    break;
-  }
+  if (modalId === "edit") editProfileModal();
 }
 
 function editProfileModal() {
@@ -183,17 +173,13 @@ closeButtons.forEach((button) => {
   });
 });
 
-previewModal.addEventListener("click", (evt) => {
-  if (evt.target === previewModal) closeModal();
-});
+document.addEventListener("click", (evt) => {
+  const openModal = document.querySelector(".modal_opened");
 
-editModal.addEventListener("click", (evt) => {
-  if(evt.target === editModal) closeModal();
+  if (openModal && evt.target.classList.contains("modal")) {
+    openModal.classList.remove("modal_opened");
+  }
 });
-
-newPostModal.addEventListener("click", (evt) => {
-  if(evt.target === newPostModal) closeModal();
-})
 
 profileForm.addEventListener("submit", handleEditProfileFormSubmit);
 
