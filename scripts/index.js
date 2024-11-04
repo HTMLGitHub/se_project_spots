@@ -39,7 +39,10 @@ const closeButtons = document.querySelectorAll(".modal__close-btn");
 
 const editModal = document.querySelector("#edit");
 const newPostModal = document.querySelector("#new-post");
+const previewModal = document.querySelector("#preview");
 
+const modalImage = previewModal.querySelector(".modal__preview-image");
+const modalCaption = previewModal.querySelector(".modal__preview-caption");
 
 const cardTemplate = document.querySelector("#card__template").content;
 const cardList = document.querySelector("#cards__list-id");
@@ -81,7 +84,7 @@ function createCard(item) {
   });
 
   cardImage.addEventListener("click", () => {
-    console.log("Make Image full sized");
+    openImageModal(cardImage.src, cardCaption.textContent);
   });
 
   cardDeleteButton.addEventListener("click", () => {
@@ -102,6 +105,14 @@ function renderCards() {
   initialCards.forEach((element) => {
     getCardElement(element);
   });
+}
+
+function openImageModal(imgSrc, captionText) {
+  modalImage.src = imgSrc;
+  modalImage.alt = captionText;
+  modalCaption.textContent = captionText;
+
+  previewModal.classList.add("modal_opened");
 }
 
 function showModal(button) {

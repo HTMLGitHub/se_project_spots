@@ -40,7 +40,11 @@
                 <p class="profile__vocation">Civil Aviator</p>
               </div>
 
-              <button class="profile__edit-button modal-button" type="button" data-modal="edit">
+              <button
+                class="profile__edit-button modal-button"
+                type="button"
+                data-modal="edit"
+              >
                 <img
                   class="profile__edit-logo"
                   src="./images/edit-logo.svg"
@@ -51,7 +55,11 @@
             </div>
           </div>
 
-          <button class="profile__new-post-button modal-button" type="button" data-modal="new-post">
+          <button
+            class="profile__new-post-button modal-button"
+            type="button"
+            data-modal="new-post"
+          >
             <img
               src="./images/plus.svg"
               alt="Plus image"
@@ -86,7 +94,11 @@
       <div class="modal" id="edit">
         <div class="modal__container modal__edit">
           <h2 class="modal__title">Edit Profile</h2>
-          <button type="button" class="modal__close-btn" data-close="edit"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            data-close="edit"
+          ></button>
 
           <form name="profile-form" class="modal__form">
             <label for="name" class="modal__label">
@@ -107,14 +119,21 @@
                 placeholder="Enter description"
               />
             </label>
-            <button type="submit" class="modal__submit-btn" data-close="edit">Save</button>
+            <button type="submit" class="modal__submit-btn" data-close="edit">
+              Save
+            </button>
           </form>
         </div>
       </div>
+
       <div class="modal" id="new-post">
         <div class="modal__container">
           <h2 class="modal__title">New Post</h2>
-          <button type="button" class="modal__close-btn" data-close="new-post"></button>
+          <button
+            type="button"
+            class="modal__close-btn"
+            data-close="new-post"
+          ></button>
 
           <form name="new-post-form" class="modal__form">
             <label for="link" class="modal__label">
@@ -135,8 +154,34 @@
                 placeholder="Type your caption"
               />
             </label>
-            <button type="submit" class="modal__submit-btn" data-close="new-post">Save</button>
+            <button
+              type="submit"
+              class="modal__submit-btn"
+              data-close="new-post"
+            >
+              Save
+            </button>
           </form>
+        </div>
+      </div>
+
+      <div class="modal" id="preview">
+        <div class="modal__container modal__container-preview">
+          <button
+            class="modal__close-btn modal__close-btn-preview"
+            type="button"
+            data-close="preview"
+          ></button>
+          <figure class="modal__preview">
+            <img
+              src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
+              alt="#"
+              class="modal__preview-image"
+            />
+            <figcaption class="modal__preview-caption">
+              Val Thorens
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
