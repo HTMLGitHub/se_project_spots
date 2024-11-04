@@ -183,12 +183,17 @@ closeButtons.forEach((button) => {
   });
 });
 
-window.addEventListener("click", (event) => {
-  const openedModal = document.querySelector(".model_opened");
-  if (openedModal && event.target === openedModal) {
-    openedModal.classList.remove("modal_opened");
-  }
+previewModal.addEventListener("click", (evt) => {
+  if (evt.target === previewModal) closeModal();
 });
+
+editModal.addEventListener("click", (evt) => {
+  if(evt.target === editModal) closeModal();
+});
+
+newPostModal.addEventListener("click", (evt) => {
+  if(evt.target === newPostModal) closeModal();
+})
 
 profileForm.addEventListener("submit", handleEditProfileFormSubmit);
 
