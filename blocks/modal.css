@@ -110,6 +110,19 @@
   color: rgba(33, 33, 33, 1);
 }
 
+.modal__input:invalid +.modal__error {
+  display: inline;
+}
+
+.modal__error {
+  display: none;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17.6px;
+  color: #FF0000;
+}
+
 .modal__submit-btn {
   width: 156px;
   height: 52px;
