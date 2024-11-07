@@ -51,14 +51,9 @@ const newPostForm = document.forms["new-post-form"];
 const linkInput = newPostForm.querySelector("#link");
 const captionInput = newPostForm.querySelector("#caption");
 
-// Universal function to open modals
-function openPopup(popup) {
-  popup.classList.add("modal_opened");
-}
-
-// Universal function to close modals
-function closePopup(popup) {
-  popup.classList.remove("modal_opened");
+// Universal function to open/close modals
+function operatePopup(popup, action) {
+  popup.classList[action]("modal_opened");
 }
 
 // Function to create a new card element
@@ -109,7 +104,7 @@ function openImageModal(imgSrc, captionText) {
   modalImage.src = imgSrc;
   modalImage.alt = captionText;
   modalCaption.textContent = captionText;
-  openPopup(previewModal);
+  operatePopup(previewModal, "add");
 }
 
 // Function to fill the profile form with current profile values
@@ -123,7 +118,7 @@ function handleEditProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileVocation.textContent = vocationInput.value;
-  closePopup(editModal);
+  operatePopup(editModal, "remove");
 }
 
 // Function to handle new post form submission
@@ -135,7 +130,7 @@ function handleNewPostFormSubmit(evt) {
   };
   addCardToList(newCard);
   evt.target.reset(); // Clear the form inputs after submission
-  closePopup(newPostModal);
+  operatePopup(newPostModal, "remove");
 }
 
 // Event listeners for opening modals when buttons are clicked
@@ -144,7 +139,7 @@ modalButtons.forEach((button) => {
     const modalId = button.getAttribute("data-modal");
     const modal = document.getElementById(modalId);
     if (modal) {
-      openPopup(modal);
+      operatePopup(modal, "add");
       if (modalId === "edit") fillProfileForm();
     }
   });
@@ -154,7 +149,7 @@ modalButtons.forEach((button) => {
 closeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const modal = button.closest(".modal");
-    if (modal) closePopup(modal);
+    if (modal) operatePopup(modal, "remove");
   });
 });
 
@@ -162,7 +157,7 @@ closeButtons.forEach((button) => {
 document.querySelectorAll(".modal").forEach((modal) => {
   modal.addEventListener("click", (evt) => {
     if (evt.target === modal) {
-      closePopup(modal);
+      operatePopup(modal, "remove");
     }
   });
 });

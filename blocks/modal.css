@@ -114,8 +114,19 @@
   display: inline;
 }
 
+.modal__input_type_error {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 17.6px;
+  color: #FF0000;
+}
+
 .modal__error {
   display: none;
+}
+
+.modal__error_visible {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 16px;
