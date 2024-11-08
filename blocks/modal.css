@@ -43,7 +43,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color:#212121;
+  color: #212121;
   padding: 0;
   margin: 0 0 32px 0;
 }
@@ -54,11 +54,11 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background-image: url('../images/close-icon.png');
+  background-image: url("../images/close-icon.png");
   background-color: #fff;
   background-size: cover;
   border: none;
-  opacity: .7;
+  opacity: 0.7;
   transition: opacity 0.3s;
   background-repeat: no-repeat;
   margin: 0;
@@ -91,10 +91,10 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  color: rgba(33,33,33,0.3);
+  color: rgba(33, 33, 33, 0.3);
   height: 52px;
   border-radius: 8px;
-  border: 1px rgba(33,33,33,0.4) solid;
+  border: 1px rgba(33, 33, 33, 0.4) solid;
   transition: border-color 0.3s ease;
   margin: 0;
   padding: 0 12px 0;
@@ -105,21 +105,16 @@
   border-color: rgba(33, 33, 33, 1);
 }
 
-.modal__input:not(:placeholder-shown)
-{
+.modal__input:not(:placeholder-shown) {
   color: rgba(33, 33, 33, 1);
 }
 
-.modal__input:invalid +.modal__error {
+.modal__input:invalid + .modal__error {
   display: inline;
 }
 
 .modal__input_type_error {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 17.6px;
-  color: #FF0000;
+  outline: 1px solid rgba(255, 0, 0, 0.6);
 }
 
 .modal__error {
@@ -131,7 +126,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 17.6px;
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .modal__submit-btn {
@@ -139,14 +134,24 @@
   height: 52px;
   border-radius: 8px;
   background-color: #212121;
-  color: #FCF5E5;
-  cursor:pointer;
+  color: #fcf5e5;
+  cursor: pointer;
   opacity: 1;
   transition: opacity 0.3s;
 }
 
 .modal__submit-btn:hover {
-  opacity: .8;
+  opacity: 0.8;
+}
+
+.modal__submit-btn_disabled {
+  background-color: #808080;
+  cursor: default;
+  border: none;
+}
+
+.modal__submit-btn_disabled:hover {
+  opacity: 1;
 }
 
 .modal__preview-image {
@@ -164,7 +169,7 @@
   font-size: 20px;
   line-height: 24px;
   background-color: #212121;
-  color: #FFF;
+  color: #fff;
   border-radius: 8px;
   display: inline-block;
   padding: 4px 8px;
