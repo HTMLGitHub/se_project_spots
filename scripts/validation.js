@@ -18,9 +18,6 @@ function toggleInputError(
 ) {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
 
-  console.log(`inputElement: ${inputElement}`);
-  console.log(`errorElement: ${errorElement}`);
-
   inputElement.classList[action](config.inputErrorClass);
   errorElement.classList[action](config.errorClass);
   errorElement.textContent = errorMessage;
@@ -41,12 +38,17 @@ function hasInvalidInput(inputList) {
 
 function toggleButtonState(inputList, buttonElement, config) {
   if (hasInvalidInput(inputList)) {
-    buttonElement.disabled = true;
-    buttonElement.classList.add(config.inactiveButtonClass);
+    disableButton(buttonElement);
   } else {
     buttonElement.disabled = false;
     buttonElement.classList.remove(config.inactiveButtonClass);
   }
+}
+
+function disableButton(buttonElement) {
+  buttonElement.classList.add(settings.inactiveButtonClass);
+  buttonElement.disabled = true;
+  return buttonElement;
 }
 
 function setEventListners(formElement, config) {

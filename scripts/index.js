@@ -33,6 +33,8 @@ const editModal = document.querySelector("#edit");
 const newPostModal = document.querySelector("#new-post");
 const previewModal = document.querySelector("#preview");
 
+const submitButton = document.querySelector("#modal__button-post");
+
 const modalImage = previewModal.querySelector(".modal__preview-image");
 const modalCaption = previewModal.querySelector(".modal__preview-caption");
 
@@ -131,6 +133,7 @@ function handleNewPostFormSubmit(evt) {
   addCardToList(newCard);
   evt.target.reset(); // Clear the form inputs after submission
   operatePopup(newPostModal, "remove");
+  disableButton(submitButton);
 }
 
 // Event listeners for opening modals when buttons are clicked
