@@ -53,9 +53,27 @@ const newPostForm = document.forms["new-post-form"];
 const linkInput = newPostForm.querySelector("#link");
 const captionInput = newPostForm.querySelector("#caption");
 
+// Function to handle closing the modal when Esc is pressed
+function closeModalOnEsc(event) {
+  if (event.key === "Escape") {
+    const openModal = document.querySelector(".modal.modal_opened");
+    if (openModal) {
+      operatePopup(openModal, "remove");
+    }
+  }
+}
+
 // Universal function to open/close modals
 function operatePopup(popup, action) {
   popup.classList[action]("modal_opened");
+
+  if (action === "add") {
+    // Add the keydown event listener to close on Esc key
+    document.addEventListener("keydown", closeModalOnEsc);
+  } else {
+    // Remove the keydown event listener when the modal is closed
+    document.removeEventListener("keydown", closeModalOnEsc);
+  }
 }
 
 // Function to create a new card element
