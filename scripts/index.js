@@ -56,7 +56,7 @@ const captionInput = newPostForm.querySelector("#caption");
 // Function to handle closing the modal when Esc is pressed
 function closeModalOnEsc(event) {
   if (event.key === "Escape") {
-    const openModal = document.querySelector(".modal.modal_opened");
+    const openModal = document.querySelector(".modal_opened");
     if (openModal) {
       operatePopup(openModal, "remove");
     }
