@@ -7,8 +7,6 @@ const settings = {
   errorClass: "modal__error_visible",
 };
 
-const forms = Array.from(document.querySelectorAll(".modal__form"));
-
 function toggleInputError(
   formElement,
   inputElement,
@@ -38,15 +36,15 @@ function hasInvalidInput(inputList) {
 
 function toggleButtonState(inputList, buttonElement, config) {
   if (hasInvalidInput(inputList)) {
-    disableButton(buttonElement);
+    disableButton(buttonElement, config);
   } else {
     buttonElement.disabled = false;
     buttonElement.classList.remove(config.inactiveButtonClass);
   }
 }
 
-function disableButton(buttonElement) {
-  buttonElement.classList.add(settings.inactiveButtonClass);
+function disableButton(buttonElement, config) {
+  buttonElement.classList.add(config.inactiveButtonClass);
   buttonElement.disabled = true;
   return buttonElement;
 }
