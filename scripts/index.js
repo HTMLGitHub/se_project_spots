@@ -33,7 +33,7 @@ const editModal = document.querySelector("#edit");
 const newPostModal = document.querySelector("#new-post");
 const previewModal = document.querySelector("#preview");
 
-const submitButton = document.querySelector("#modal__button-post");
+const cardSubmitButton = document.querySelector("#modal__button-post");
 
 const modalImage = previewModal.querySelector(".modal__preview-image");
 const modalCaption = previewModal.querySelector(".modal__preview-caption");
@@ -58,13 +58,13 @@ function closeModalOnEsc(event) {
   if (event.key === "Escape") {
     const openModal = document.querySelector(".modal_opened");
     if (openModal) {
-      operatePopup(openModal, "remove");
+      operatePopup(openModal);
     }
   }
 }
 
 // Universal function to open/close modals
-function operatePopup(popup, action) {
+function operatePopup(popup, action="remove") {
   popup.classList[action]("modal_opened");
 
   if (action === "add") {
@@ -138,7 +138,7 @@ function handleEditProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileVocation.textContent = vocationInput.value;
-  operatePopup(editModal, "remove");
+  operatePopup(editModal);
 }
 
 // Function to handle new post form submission
@@ -150,8 +150,8 @@ function handleNewPostFormSubmit(evt) {
   };
   addCardToList(newCard);
   evt.target.reset(); // Clear the form inputs after submission
-  operatePopup(newPostModal, "remove");
-  disableButton(submitButton);
+  operatePopup(newPostModal);
+  disableButton(cardSubmitButton, settings);
 }
 
 // Event listeners for opening modals when buttons are clicked
@@ -170,7 +170,7 @@ modalButtons.forEach((button) => {
 closeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const modal = button.closest(".modal");
-    if (modal) operatePopup(modal, "remove");
+    if (modal) operatePopup(modal);
   });
 });
 
@@ -178,7 +178,7 @@ closeButtons.forEach((button) => {
 document.querySelectorAll(".modal").forEach((modal) => {
   modal.addEventListener("click", (evt) => {
     if (evt.target === modal) {
-      operatePopup(modal, "remove");
+      operatePopup(modal);
     }
   });
 });
