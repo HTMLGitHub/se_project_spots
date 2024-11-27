@@ -1,3 +1,5 @@
+import { enableValidation, settings } from "./validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -189,3 +191,5 @@ newPostForm.addEventListener("submit", handleNewPostFormSubmit);
 
 // Initial rendering of cards
 renderCards();
+
+enableValidation(settings);

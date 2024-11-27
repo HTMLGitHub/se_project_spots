@@ -1,4 +1,4 @@
-const settings = {
+export const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
@@ -65,7 +65,7 @@ function setEventListners(formElement, config) {
   });
 }
 
-function enableValidation(config) {
+export function enableValidation(config) {
   const formList = document.querySelectorAll(config.formSelector);
   formList.forEach((formElement) => {
     formElement.addEventListener("submit", function (evt) {
