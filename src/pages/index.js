@@ -1,4 +1,11 @@
+// Import validation 
 import { enableValidation, settings } from "../scripts/validation.js";
+
+// Import css styles
+import "./index.css";
+
+// Import images
+import editLogo from "../images/edit-logo.svg";
 
 const initialCards = [
   {
@@ -54,6 +61,10 @@ const newPostForm = document.forms["new-post-form"];
 
 const linkInput = newPostForm.querySelector("#link");
 const captionInput = newPostForm.querySelector("#caption");
+
+// Select the edit button element and set the src
+const editElement = document.getElementsByClassName("profile__edit-logo");
+editElement.src = editLogo;
 
 // Function to handle closing the modal when Esc is pressed
 function closeModalOnEsc(event) {
