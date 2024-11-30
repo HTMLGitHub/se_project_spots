@@ -5,7 +5,10 @@ import { enableValidation, settings } from "../scripts/validation.js";
 import "./index.css";
 
 // Import images
+import headerLogo from "../images/spots-logo.svg";
+import avatarImage from "../images/avatar.jpg";
 import editLogo from "../images/edit-logo.svg";
+import addIcon from "../images/plus.svg";
 
 const initialCards = [
   {
@@ -62,9 +65,18 @@ const newPostForm = document.forms["new-post-form"];
 const linkInput = newPostForm.querySelector("#link");
 const captionInput = newPostForm.querySelector("#caption");
 
-// Select the edit button element and set the src
-const editElement = document.getElementsByClassName("profile__edit-logo");
+// Select the element images and set the src
+const logoElement = document.querySelector(".header__logo");
+logoElement.src = headerLogo;
+
+const avatarElement = document.querySelector(".profile__image");
+avatarElement.src = avatarImage;
+
+const editElement = document.querySelector(".profile__edit-logo");
 editElement.src = editLogo;
+
+const addElement = document.querySelector(".profile__new-post-button-logo");
+addElement.src = addIcon;
 
 // Function to handle closing the modal when Esc is pressed
 function closeModalOnEsc(event) {
