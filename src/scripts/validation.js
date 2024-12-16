@@ -43,7 +43,7 @@ function toggleButtonState(inputList, buttonElement, config) {
   }
 }
 
-function disableButton(buttonElement, config) {
+export function disableButton(buttonElement, config) {
   buttonElement.classList.add(config.inactiveButtonClass);
   buttonElement.disabled = true;
   return buttonElement;
