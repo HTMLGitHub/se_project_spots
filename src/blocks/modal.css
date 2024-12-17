@@ -266,4 +266,18 @@ visibility: hidden;}
     width: 276px;
     height: 52px;
   }
+  
+  .modal__close-btn-delete {
+    position: absolute;
+    top: -50px;
+    right: 0;
+  }
+
+  .modal__delete__form {
+    padding: 0;
+    margin: 0 0 12px;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px; 
+  }
 }

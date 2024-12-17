@@ -29,6 +29,7 @@ const previewModal = document.querySelector("#preview");
 const deleteModal = document.querySelector("#delete");
 
 const cardSubmitButton = document.querySelector("#modal__button-post");
+const avatarSubmitButton = document.querySelector("#modal__button-avatar");
 
 const modalImage = previewModal.querySelector(".modal__preview-image");
 const modalCaption = previewModal.querySelector(".modal__preview-caption");
@@ -124,27 +125,6 @@ function handleDeletion(evt) {
   });
 }
 
-function toggleLikeStatus(cardId, isLiked) {
-  if (isLiked) {
-    api.dislikeCard(cardId)
-    .then(() => {
-      
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }
-  else {
-    api.likeCard(cardId)
-    .then(() => {
-      
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }
-}
-
 // Function to create a new card element
 function createCard(data) {
   const cardElement = cardTemplate.cloneNode(true).firstElementChild;
@@ -153,19 +133,26 @@ function createCard(data) {
   const cardLikeButton = cardElement.querySelector(".card__content-like");
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
+  
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardCaption.textContent = data.name;
+
+  if (data.isLiked) {
+    cardLikeButton.classList.add("card__content-like_liked");
+  }
 
   // Toggle like button state
   cardLikeButton.addEventListener("click", () => {
     const isLiked = cardLikeButton.classList.contains("card__content-like_liked");
 
-    console.log(`isLiked: ${isLiked}`);
-
-    toggleLikeStatus(data._id, isLiked);
-
-    cardLikeButton.classList.toggle("card__content-like_liked");
+    api.handleLikeStatus(data._id, isLiked)
+    .then(() => {
+      cardLikeButton.classList.toggle("card__content-like_liked");
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   });
 
   // Open image modal when the card image is clicked
@@ -203,7 +190,7 @@ function renderCards(cards) {
 function callApi() {
   api
     .getAPIInfo()
-    .then(([userProfile, cards ]) => {
+    .then(([userProfile, cards]) => {
       renderUserProfile(userProfile);
       renderCards(cards);
     })
@@ -268,6 +255,7 @@ function handleNewAvatarFormSubmit(evt)
     .then((user) => {
       avatarElement.src = user.avatar;
       evt.target.reset();
+      disableButton(avatarSubmitButton, settings);
       operatePopup(editAvatarModal);
     })
     .catch(console.error)

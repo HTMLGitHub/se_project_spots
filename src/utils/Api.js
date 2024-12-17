@@ -7,124 +7,57 @@ export default class Api {
     this.#headers = headers;
   }
 
+  async #request (endpoint, options={}) {
+    const data = await fetch(`${this.#url}${endpoint}`, {
+      headers: this.#headers,
+      ...options,
+    });
+
+    return data.ok? data.json() : Promise.reject(`Error: ${data.status}`);
+  }
+
   getAPIInfo() {
     return Promise.all([this.getUserProfile(), this.getCardsInfo()]);
   }
 
-  async getCardsInfo() {
-    const res = await fetch(`${this.#url}/cards`, {
-      headers: this.#headers,
-    });
-    if (res.ok) {
-      return res.json();
-    }
-    return await Promise.reject(`Error: ${res.status}`);
+  getCardsInfo() {
+    return this.#request(`/cards`);
   }
 
-  async getUserProfile() {
-    const data = await fetch(`${this.#url}/users/me`, {
-      headers: this.#headers,
-    });
-    if (data.ok) {
-      return data.json();
-    }
-    return await Promise.reject(`Error: ${data.status}`);
+  getUserProfile() {
+    return this.#request(`/users/me`);
   }
 
-  async editUserInfo({name, about}) {
-    const data = await fetch(`${this.#url}/users/me`, {
+  editUserInfo({name, about}) {
+    return this.#request(`/users/me`, {
       method: "PATCH",
-      headers: this.#headers,
-
-      // Send the data in teh body as a JSON string
-      body: JSON.stringify({
-        name,
-        about,
-      }),
+      body: JSON.stringify({ name, about }),
     });
-    
-    if (data.ok) {
-      return data.json();
-    }
-
-    return await Promise.reject(`Error: ${data.status}`);
   }
 
-  async editUserAvatar(avatar) {
-    const image = await fetch(`${this.#url}/users/me/avatar`, {
+  editUserAvatar(avatar) {
+    return this.#request(`/users/me/avatar`, {
       method: "PATCH",
-      headers: this.#headers,
-
-      // Send the data in teh body as a JSON string
-      body: JSON.stringify({
-        avatar,
-      }),
+      body: JSON.stringify({avatar}),
     });
-
-    if(image.ok) {
-      return image.json();
-    }
-
-    return await Promise.reject(`Error: ${image.status}`);
   }
 
-  async addPost({isLiked, name, link}) {
-    const data = await fetch(`${this.#url}/cards`, {
+  addPost({isLiked, name, link}) {
+    return this.#request(`/cards`, {
       method: "POST",
-      headers: this.#headers,
-
-      // Send the data in teh body as a JSON string
-      body: JSON.stringify({
-        isLiked,
-        name,
-        link,
-      }),
+      body: JSON.stringify({ isLiked, name, link }),
     });
-
-    if (data.ok) {
-      return data.json();      
-    }
-    
-    return await Promise.reject(`Error: ${data.status}`);
   }
 
-  async deleteCard(id) {
-
-    const data = await fetch(`${this.#url}/cards/${id}`, {
+  deleteCard(id) {
+    return this.#request(`/cards/${id}`, {
       method: "DELETE",
-      headers: this.#headers,
     });
-
-    if (data.ok) {
-      return data.json();
-    }
-
-    return await Promise.reject(`Error: ${data.status}`);
   }
 
-  async likeCard(id) {
-    const data = await fetch(`${this.#url}/cards/${id}/likes`, {
-      method: "PUT",
-      headers: this.#headers,
+  handleLikeStatus(id, isLiked) {
+    return this.#request(`/cards/${id}/likes`, {
+      method: isLiked ? "DELETE" : "PUT",
     });
-
-    if (data.ok) {
-      return data.json();
-    }
-
-    return await Promise.reject(`Error: ${data.status}`);
-  }
-
-  async dislikeCard(id) {
-    const data = await fetch(`${this.#url}/cards/${id}/likes`, {
-      method: "DELETE",
-      headers: this.#headers,
-    });
-
-    if (data.ok) {
-      return data.json();
-    }
-
-    return await Promise.reject(`Error: ${data.status}`);
-  }
+  }   
 }

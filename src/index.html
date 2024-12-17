@@ -22,20 +22,17 @@
 
       <main class="content">
         <section class="profile">
-
           <div class="profile__avatar">
-
             <div class="profile__avatar-container">
-
               <img alt="Bessie Coleman Image" class="profile__image" />
-              
+
               <button
                 class="profile__avatar__image__edit-button modal-button"
                 type="button"
                 data-modal="edit-avatar"
               >
                 <img alt="edit-logo" class="profile__avatar__edit-logo" />
-              </button>              
+              </button>
             </div>
             <div class="profile__info">
               <div class="profile__avatar-title">
@@ -147,7 +144,12 @@
               />
               <span class="modal__error" id="link-error"></span>
             </label>
-            <button type="submit" class="modal__submit-btn" data-close="edit-avatar">
+            <button
+              type="submit"
+              class="modal__submit-btn"
+              id="modal__button-avatar"
+              data-close="edit-avatar"
+            >
               Save
             </button>
           </form>
