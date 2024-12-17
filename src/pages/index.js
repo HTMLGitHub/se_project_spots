@@ -187,7 +187,7 @@ function renderCards(cards) {
 }
 
 // Render initial cards
-function callApi() {
+function getAppData() {
   api
     .getAPIInfo()
     .then(([userProfile, cards]) => {
@@ -335,6 +335,6 @@ cancelButton.addEventListener("click", () => {
     
 
 // Initial rendering of cards
-callApi();
+getAppData();
 
 enableValidation(settings);
