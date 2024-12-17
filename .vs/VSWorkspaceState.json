@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\scripts"
+    "\\src",
+    "\\src\\blocks",
+    "\\src\\pages",
+    "\\src\\scripts",
+    "\\src\\utils",
+    "\\src\\vendor"
   ],
-  "SelectedNode": "\\scripts\\index.js",
+  "SelectedNode": "\\src\\blocks\\modal.css",
   "PreviewInSolutionExplorer": false
 }
